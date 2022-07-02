@@ -4,35 +4,31 @@ using UnityEngine;
 
 public class player_controller : MonoBehaviour
 {
-    Rigidbody2D body;
-
-    float horizontal;
-    float vertical;
-    float diagonalSpeed = 0.8f;
-
-    public float runSpeed = 20.0f;
-
+    //create variables
+    public float velocity = 10.0f;
+    public Rigidbody rb; 
+    public Vector2 movement;
 
     // Start is called before the first frame update
     void Start()
     {
-        body = GetComponent<Rigidbody2D>();
+        rb = this.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame, create movement input based on wasd/arrow input
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal"); //-1 is left
-        vertical = Input.GetAxisRaw("Vertical"); //-1 is down
+       movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        
     }
 
     void FixedUpdate()
     {
-        if (horizontal != 0 && vertical !=0) //diagonal movement 
-        {
-            horizontal *= diagonalSpeed;
-            vertical *= diagonalSpeed;
-        }
-        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        moveSprite(movement); //move the character in direction of input by calling the function below
+    }
+
+    //create a function to transform 2d position vector; normalization to account for diagonal movement?
+    void moveSprite(Vector2 direction){
+        rb.MovePosition((Vector2)transform.position + (direction * velocity * Time.deltaTime));
     }
 }
