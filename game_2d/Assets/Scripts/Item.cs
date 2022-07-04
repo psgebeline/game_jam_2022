@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Items
 {
@@ -21,6 +22,11 @@ namespace Items
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _defaultColor = _spriteRenderer.color;
+        }
+
+        private void OnEnable()
+        {
+            UnselectItem();
         }
 
         private void Start()
@@ -49,21 +55,16 @@ namespace Items
             UnselectItem();
         }
 
-        private void OnMouseDown()
-        {
-            if (!_canBePickedUp) return;
-            GameManager.Self.ItemHasBeedSelected(this);
-            UnselectItem();
-        }
-
         public void SelectItem()
         {
             _spriteRenderer.color = _selectedColor;
+            GameManager.Self.ItemHasBeedSelected(this);
         }
 
         public void UnselectItem()
         {
             _spriteRenderer.color = _defaultColor;
+            GameManager.Self.ItemHasBeedUnselected(this);
         }
     }
 }

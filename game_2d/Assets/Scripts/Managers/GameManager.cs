@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private PlayerComponent _player;
+    private Item _selectedItem;
 
     public static GameManager Self;
     public PlayerComponent Player => _player;
+    public Item SelectedItem => _selectedItem;
 
     private void Awake()
     {
@@ -19,6 +21,11 @@ public class GameManager : MonoBehaviour
 
     public void ItemHasBeedSelected(Item item)
     {
-        _player.PickUpAnItem(item);
+        _selectedItem = item;
+    }
+
+    public void ItemHasBeedUnselected(Item item)
+    {
+        if (_selectedItem == item) _selectedItem = null;
     }
 }

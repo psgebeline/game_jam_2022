@@ -9,19 +9,24 @@ namespace Player.Controls
     {
         //create variables
         [SerializeField]
-        private float _velocity = 10.0f;
+        private KeyCode _pickUpKey;
+        [SerializeField]
+        private KeyCode _dropKey;
 
         private Rigidbody _rb;
+        private PlayerComponent _player;
 
         // Start is called before the first frame update
         void Start()
         {
             _rb = this.GetComponent<Rigidbody>();
+            _player = GameManager.Self.Player;
         }
 
         private void Update()
         {
             MouseScroll();
+            ButtonsLogic();
         }
 
         /// <summary>
@@ -36,7 +41,7 @@ namespace Player.Controls
         //create a function to transform 2d position vector; normalization to account for diagonal movement?
         void PlayerMoving(Vector2 direction)
         {
-            _rb.MovePosition((Vector2)transform.position + (direction * _velocity * Time.fixedDeltaTime)); //if we are working on FixedUpdate we need to use Time.fixedDeltaTime
+            _rb.MovePosition((Vector2)transform.position + (direction * _player.MovementSpeed * Time.fixedDeltaTime)); //if we are working on FixedUpdate we need to use Time.fixedDeltaTime
         }
 
         public event Action<ControllsEnum.MouseScrollType> OnMouseScrolled;
@@ -47,6 +52,17 @@ namespace Player.Controls
             if (mouseScroll > 0) OnMouseScrolled.Invoke(ControllsEnum.MouseScrollType.Up);
             else if (mouseScroll < 0) OnMouseScrolled.Invoke(ControllsEnum.MouseScrollType.Down);
         }
+
+        private void ButtonsLogic()
+        {
+            if (Input.GetKeyDown(_pickUpKey))
+                OnPlayerPickingUp.Invoke();
+            if (Input.GetKeyDown(_dropKey))
+                OnPlayerDropping.Invoke();
+        }
+
+        public event Action OnPlayerPickingUp;
+        public event Action OnPlayerDropping;
     }
 }
 //good changes
