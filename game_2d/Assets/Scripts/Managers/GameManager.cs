@@ -2,30 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Player;
-using Items;
+using Interaction_object;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private PlayerComponent _player;
-    private Item _selectedItem;
+    private InteractionObject _selectedObject;
 
     public static GameManager Self;
     public PlayerComponent Player => _player;
-    public Item SelectedItem => _selectedItem;
+    public InteractionObject SelectedObject => _selectedObject;
 
     private void Awake()
     {
         Self = this;
     }
 
-    public void ItemHasBeedSelected(Item item)
+    public void ItemHasBeedSelected(InteractionObject interactionObject)
     {
-        _selectedItem = item;
+        _selectedObject = interactionObject;
     }
 
-    public void ItemHasBeedUnselected(Item item)
+    public void ItemHasBeedUnselected(InteractionObject interactionObject)
     {
-        if (_selectedItem == item) _selectedItem = null;
+        if (_selectedObject == interactionObject) _selectedObject = null;
     }
 }

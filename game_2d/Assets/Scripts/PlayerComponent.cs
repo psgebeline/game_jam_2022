@@ -1,4 +1,4 @@
-using Items;
+using Interaction_object;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -40,13 +40,22 @@ namespace Player
 
         public void PickUpAnItem()
         {
-            var selectedItem = GameManager.Self.SelectedItem;
-            if (selectedItem == null || !_inventory.AddItem(selectedItem)) return;
-            selectedItem.UnselectItem();
-            selectedItem.gameObject.SetActive(false);
-            selectedItem.transform.parent = transform;
-            selectedItem.transform.position = transform.position;
-            TakeAnItem();
+            var selectedItem = GameManager.Self.SelectedObject;
+            if (selectedItem == null) return;
+            if (selectedItem is Item)
+            {
+                if (!_inventory.AddItem((Item)selectedItem)) return;
+                selectedItem.UnselectItem();
+                selectedItem.gameObject.SetActive(false);
+                selectedItem.transform.parent = transform;
+                selectedItem.transform.position = transform.position;
+                TakeAnItem();
+            }
+            else if (selectedItem is Patient)
+            {
+                Debug.Log("it's patient!");
+            }
+
         }
 
         public event Action<Item> OnPlayerChangedItem;
