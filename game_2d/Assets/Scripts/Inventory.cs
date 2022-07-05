@@ -24,6 +24,7 @@ namespace Player.Inventory
             if (_items.Count >= _capacity) return false;
             _items.Add(item);
             _currentItemIndex = _player.TakeLastPickedItem ? _items.Count - 1 : _currentItemIndex;
+            OnInventoryChanged?.Invoke(GetAllItems());
             return true;
         }
 
@@ -41,9 +42,17 @@ namespace Player.Inventory
             return current_item;
         }
 
+        public Item[] GetAllItems()
+        {
+            return _items.ToArray();
+        }
+
         public bool RemoveItem(Item item)
         {
-            return _items.Remove(item);
+            bool status = _items.Remove(item);
+            if (status)
+                OnInventoryChanged?.Invoke(GetAllItems());
+            return status;
         }
 
         public void NextItem()
@@ -61,5 +70,7 @@ namespace Player.Inventory
                 _currentItemIndex = _items.Count - 1;
             else _currentItemIndex -= 1;
         }
+
+        public event System.Action<Item[]> OnInventoryChanged;
     }
 }

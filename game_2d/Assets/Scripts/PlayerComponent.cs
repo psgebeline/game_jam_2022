@@ -26,6 +26,8 @@ namespace Player
         public float DistanceToSelection => _distanceToSelection;
         public bool TakeLastPickedItem => _takeLastPickedItem;
         public float MovementSpeed => _movementSpeed;
+        public ref Inventory.Inventory Inventory => ref _inventory;
+        public Item CurrentItem => _currentItem;
 
         private void Awake()
         {
@@ -40,19 +42,23 @@ namespace Player
         {
             var selectedItem = GameManager.Self.SelectedItem;
             if (selectedItem == null || !_inventory.AddItem(selectedItem)) return;
+            selectedItem.UnselectItem();
             selectedItem.gameObject.SetActive(false);
             selectedItem.transform.parent = transform;
             selectedItem.transform.position = transform.position;
             TakeAnItem();
         }
 
+        public event Action<Item> OnPlayerChangedItem;
+
         private void TakeAnItem()
         {
             if (!_lookOnItems) return;
             if (_currentItem != null) _currentItem.gameObject.SetActive(false);
             _currentItem = _inventory.GetItemByCurrentIndex();
-            if (_currentItem != null)
-                _currentItem.gameObject.SetActive(true);
+            OnPlayerChangedItem?.Invoke(_currentItem);
+            if (_currentItem == null) return;
+            _currentItem.gameObject.SetActive(true);
         }
 
         private void OnMouseScrolled(ControllsEnum.MouseScrollType swapType)
@@ -76,6 +82,7 @@ namespace Player
                 _currentItem.transform.position = _dropPoint.transform.position;
             _currentItem.transform.parent = null;
             _currentItem = null;
+            OnPlayerChangedItem.Invoke(_currentItem);
         }
     }
 }
