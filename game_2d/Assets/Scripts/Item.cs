@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Interaction_object
+namespace Interaction_objects
 {
     public class Item : InteractionObject
     {

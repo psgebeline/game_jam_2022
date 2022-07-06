@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Interaction_object
+namespace Interaction_objects
 {
+    [RequireComponent(typeof(BoxCollider2D), typeof(Rigidbody2D))]
     public abstract class InteractionObject : MonoBehaviour
     {
         [SerializeField]
         private Color _selectedColor = Color.green;
 
         private bool _canBeInteracted;
-        protected SpriteRenderer _spriteRenderer;
+        private SpriteRenderer _spriteRenderer;
         private Color _defaultColor;
         private Transform _player;
         private float _playerDistanceToSelection;

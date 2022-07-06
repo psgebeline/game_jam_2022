@@ -1,4 +1,4 @@
-using Interaction_object;
+using Interaction_objects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -45,6 +45,11 @@ namespace Player.Inventory
         public Item[] GetAllItems()
         {
             return _items.ToArray();
+        }
+
+        public List<Item> GetAllItemsList()
+        {
+            return _items;
         }
 
         public bool RemoveItem(Item item)
