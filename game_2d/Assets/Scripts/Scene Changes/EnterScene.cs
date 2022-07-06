@@ -11,6 +11,8 @@ public class EnterScene : MonoBehaviour
     {
         if(PlayerPrefs.GetString("LastExitName") == lastExitName)
         {
+           //PlayerScript.instance.transform.position = transform.position;
+           //PlayerScript.instance.transform.eulerAngles = transform.eulerAngles;
            PlayerScript.instance.transform.position = transform.position;
            PlayerScript.instance.transform.eulerAngles = transform.eulerAngles;
         }
