@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4527375700129120765}
   - component: {fileID: 5259418829402485694}
   m_Layer: 0
-  m_Name: Magic Slime
+  m_Name: Magic Slime 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -1223691575, guid: aa8e37a224f7e32439be92fd3c96a65b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.6597414, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.06529045, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -149,4 +149,4 @@ MonoBehaviour:
   _selectedColor: {r: 0, g: 1, b: 0, a: 1}
   _itemCharacteristics:
     _itemName: Magic Slime
-    _id: -1
+    _id: -2

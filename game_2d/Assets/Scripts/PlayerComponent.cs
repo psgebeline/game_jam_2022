@@ -32,35 +32,40 @@ namespace Player
         private void Awake()
         {
             _inventory = GetComponent<Inventory.Inventory>();
+            _inventory.OnInventoryChangedNullReturn += TakeAnCurrentItem;
             _controller = GetComponent<Controls.PlayerController>();
             _controller.OnMouseScrolled += OnMouseScrolled;
             _controller.OnPlayerPickingUp += PickUpAnItem;
             _controller.OnPlayerDropping += DropItem;
         }
 
-        public void PickUpAnItem()
+        private void PickUpAnItem()
         {
             var selectedItem = GameManager.Self.SelectedObject;
             if (selectedItem == null) return;
             if (selectedItem is Item)
             {
-                if (!_inventory.AddItem((Item)selectedItem)) return;
-                selectedItem.UnselectItem();
-                selectedItem.gameObject.SetActive(false);
-                selectedItem.transform.parent = transform;
-                selectedItem.transform.position = transform.position;
-                TakeAnItem();
+                PickUpAnItem((Item)selectedItem);
             }
             else if (selectedItem is Patient)
             {
                 Debug.Log("it's patient!");
             }
+        }
 
+        public void PickUpAnItem(Item item)
+        {
+            if (!_inventory.AddItem(item)) return;
+            item.UnselectItem();
+            item.gameObject.SetActive(false);
+            item.transform.parent = transform;
+            item.transform.position = transform.position;
+            TakeAnCurrentItem();
         }
 
         public event Action<Item> OnPlayerChangedItem;
 
-        private void TakeAnItem()
+        private void TakeAnCurrentItem()
         {
             if (!_lookOnItems) return;
             if (_currentItem != null) _currentItem.gameObject.SetActive(false);
@@ -81,7 +86,7 @@ namespace Player
                     _inventory.PrevItem();
                     break;
             }
-            TakeAnItem();
+            TakeAnCurrentItem();
         }
 
         private void DropItem()

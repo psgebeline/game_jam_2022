@@ -25,6 +25,7 @@ namespace Player.Inventory
             _items.Add(item);
             _currentItemIndex = _player.TakeLastPickedItem ? _items.Count - 1 : _currentItemIndex;
             OnInventoryChanged?.Invoke(GetAllItems());
+            OnInventoryChangedNullReturn?.Invoke();
             return true;
         }
 
@@ -60,6 +61,16 @@ namespace Player.Inventory
             return status;
         }
 
+        public Item RemoveItemWithId(int itemId)
+        {
+            int itemIndex = _items.FindIndex(x => x.ItemCharacteristics._id == itemId);
+            Item item = _items[itemIndex];
+            bool status = _items.Remove(item);
+            if (!status) return null;
+            OnInventoryChanged?.Invoke(GetAllItems());
+            return item;
+        }
+
         public void NextItem()
         {
             if (_items.Count == 0) return;
@@ -77,5 +88,6 @@ namespace Player.Inventory
         }
 
         public event System.Action<Item[]> OnInventoryChanged;
+        public event System.Action OnInventoryChangedNullReturn;
     }
 }
