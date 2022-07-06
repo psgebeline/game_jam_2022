@@ -1,4 +1,4 @@
-using Interaction_object;
+using Interaction_objects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +25,7 @@ namespace Player.Inventory
             _items.Add(item);
             _currentItemIndex = _player.TakeLastPickedItem ? _items.Count - 1 : _currentItemIndex;
             OnInventoryChanged?.Invoke(GetAllItems());
+            OnInventoryChangedNullReturn?.Invoke();
             return true;
         }
 
@@ -47,12 +48,27 @@ namespace Player.Inventory
             return _items.ToArray();
         }
 
+        public List<Item> GetAllItemsList()
+        {
+            return _items;
+        }
+
         public bool RemoveItem(Item item)
         {
             bool status = _items.Remove(item);
             if (status)
                 OnInventoryChanged?.Invoke(GetAllItems());
             return status;
+        }
+
+        public Item RemoveItemWithId(int itemId)
+        {
+            int itemIndex = _items.FindIndex(x => x.ItemCharacteristics._id == itemId);
+            Item item = _items[itemIndex];
+            bool status = _items.Remove(item);
+            if (!status) return null;
+            OnInventoryChanged?.Invoke(GetAllItems());
+            return item;
         }
 
         public void NextItem()
@@ -72,5 +88,6 @@ namespace Player.Inventory
         }
 
         public event System.Action<Item[]> OnInventoryChanged;
+        public event System.Action OnInventoryChangedNullReturn;
     }
 }
