@@ -49,7 +49,13 @@ namespace Player
             }
             else if (selectedItem is Patient)
             {
-                Debug.Log("it's patient!");
+                Patient patient = (Patient)selectedItem;
+                if (patient.IsRequirementsMenuOpened)
+                {
+                    patient.GiveRequiredItems(_inventory);
+                    TakeAnCurrentItem();
+                }
+                else StartCoroutine(patient.OpenRequirementsMenu());
             }
         }
 

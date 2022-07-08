@@ -22,7 +22,7 @@ namespace Interaction_objects
             _defaultColor = _spriteRenderer.color;
         }
 
-        private void Start()
+        protected virtual void Start()
         {
             UnselectItem();
             var player = GameManager.Self.Player;
