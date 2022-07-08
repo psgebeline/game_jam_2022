@@ -13,13 +13,13 @@ namespace Player.Controls
         [SerializeField]
         private KeyCode _dropKey;
 
-        private Rigidbody _rb;
+        private Rigidbody2D _rb;
         private PlayerComponent _player;
 
         // Start is called before the first frame update
         void Start()
         {
-            _rb = this.GetComponent<Rigidbody>();
+            _rb = this.GetComponent<Rigidbody2D>();
             _player = GameManager.Self.Player;
         }
 
