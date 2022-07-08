@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07358acbef6691942b6bdd7be81d7137, type: 3}
+  m_Name: GreenSlime
+  m_EditorClassIdentifier: 
+  _potionPrefab: {fileID: 5259418829402485694, guid: f6e5bc1cd4396944b8e714c7fca26629, type: 3}
+  _ingredients:
+    reorderableList:
+      canAdd: 1
+      canRemove: 1
+      draggable: 1
+      expandable: 1
+      multipleSelection: 1
+      isExpanded: 1
+      label:
+        m_Text: Keys
+        m_Image: {fileID: 0}
+        m_Tooltip: 
+      headerHeight: 18
+      footerHeight: 13
+      slideEasing: 0.15
+      verticalSpacing: 2
+      showDefaultBackground: 1
+      elementDisplayType: 0
+      elementNameProperty: 
+      elementNameOverride: 
+      elementIcon: {fileID: 0}
+    reqReferences: {fileID: 0}
+    isExpanded: 1
+    _keyValues:
+    - {fileID: 1257973605518530578, guid: 4edd7fec44b223c43987fa549492af28, type: 3}
+    _keys:
+    - {fileID: 1257973605518530578, guid: 4edd7fec44b223c43987fa549492af28, type: 3}
+    _values: 02000000
