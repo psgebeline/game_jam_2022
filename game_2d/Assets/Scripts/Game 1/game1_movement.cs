@@ -8,6 +8,8 @@ public class game1_movement : MonoBehaviour
     private float Move; //holds horizontal direction input
     public float jump; //control jump speed
     private Rigidbody2D rb; //assigns 2D RB
+    public float acceleration; //creates acceleration parameter
+
     
     public bool airborne; //used to prevent jumping while in midair
 
@@ -21,9 +23,13 @@ public class game1_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move = Input.GetAxis("Horizontal");
+        for( float i = 0.0f; i < 4000.0f; i+=1.0f)
+        {
 
-        rb.velocity = new Vector2(speed * Move, rb.velocity.y); //assigns velocity to player based on horizontal input/speed, y velocity remains unchanged bc horizontal input has no affect on vertical speed.
+            acceleration = 0.00000001f * i;
+            rb.velocity = new Vector2(speed + acceleration, rb.velocity.y); //makes the player move at speed plus acceleration which incrementally increases, y velocity remains unchanged bc horizontal input has no affect on vertical speed.
+        }
+
 
         if(Input.GetButtonDown("Jump") && airborne == false) //this statement will not execute when the player is in the air
         {
