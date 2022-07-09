@@ -9,7 +9,7 @@ public class game1_movement : MonoBehaviour
     public float jump; //control jump speed
     private Rigidbody2D rb; //assigns 2D RB
     public float acceleration; //creates acceleration parameter
-
+    public float maxSpeed; //acceleration cap
     
     public bool airborne; //used to prevent jumping while in midair
 
@@ -23,11 +23,11 @@ public class game1_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for( float i = 0.0f; i < 4000.0f; i+=1.0f)
+        if( acceleration < maxSpeed);
         {
 
-            acceleration = 0.00000001f * i;
-            rb.velocity = new Vector2(speed + acceleration, rb.velocity.y); //makes the player move at speed plus acceleration which incrementally increases, y velocity remains unchanged bc horizontal input has no affect on vertical speed.
+            acceleration += 1;
+            rb.velocity = new Vector2(speed + acceleration*Time.deltaTime, rb.velocity.y); //makes the player move at speed plus acceleration which incrementally increases, y velocity remains unchanged bc horizontal input has no affect on vertical speed.
         }
 
 
