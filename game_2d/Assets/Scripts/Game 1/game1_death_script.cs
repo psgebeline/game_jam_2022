@@ -17,19 +17,14 @@ public class game1_death_script : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player")) 
         {
-            Player.transform.position = startPoint.transform.position;
-            //Debug.Log(life[i]);
-            //if(i <=2)
-            {
-                //Player.transform.position = startPoint.transform.position; //when this object has a collision, if the other object is the player, respawn them at the empty gameobject spawn point
-                //Destroy(life[i]);
-                //i++;
-                
-            }
-            //else
+            Player.transform.position = startPoint.transform.position; //when this object has a collision, if the other object is the player, respawn them at the empty gameobject spawn point
+            Destroy(life[i]);
+            i++;
+            if(i > 2);
             {
                 //end game
             }
+           
             
             
         }
