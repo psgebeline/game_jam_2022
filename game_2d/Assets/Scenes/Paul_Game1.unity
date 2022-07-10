@@ -964,9 +964,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cdcb10c9f871741825a637b50b98a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7.01
+  speed: 0
   jump: 300
   acceleration: 0
+  maxSpeed: 20
   airborne: 0
 --- !u!70 &1430261125
 CapsuleCollider2D:
