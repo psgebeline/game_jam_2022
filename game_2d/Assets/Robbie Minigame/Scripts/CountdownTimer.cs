@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
-    float currentTime = 0;
+    public float currentTime = 0;
     float startingTime = 10f;
 
     [SerializeField] public TextMeshProUGUI countdownText;
@@ -24,7 +24,7 @@ public class CountdownTimer : MonoBehaviour
         if(currentTime <= 0)
         {
             currentTime = 0;
-            SceneManager.LoadScene("Lose Screen");
+            SceneManager.LoadScene("RobbieMinigame");
         } 
     }
 }
