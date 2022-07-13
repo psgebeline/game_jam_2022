@@ -103,7 +103,7 @@ public class game_manager : MonoBehaviour
             x = 2;
             _matches--;
             matchText.text = "Number of Matches: " + _matches;
-            if(_matches ==0)
+            if(_matches == 0)
             {
                 //end game
             }

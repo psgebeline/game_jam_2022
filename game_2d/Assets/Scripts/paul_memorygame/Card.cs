@@ -37,6 +37,17 @@ public class Card : MonoBehaviour
 
     public void flipCard()
     {
+        
+        if(_state == 0)
+        {
+            _state = 1;
+        }
+        else if(_state == 1)
+        {
+            _state = 0;
+        }
+        
+        
         if(_state == 0 && !DO_NOT)
         {
             GetComponent<Image>().sprite = _cardBack;
