@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     bool jump = false; //status of jump
 
+    public Animator animator; //access the animator
+
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; //calcs movespeed
@@ -20,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
         }
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove)); //sets the float variable speed in the animator to horizontal move w/ absolute value
     }
 
     void FixedUpdate()
