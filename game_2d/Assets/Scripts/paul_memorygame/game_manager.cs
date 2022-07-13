@@ -37,7 +37,7 @@ public class game_manager : MonoBehaviour
          
         for(int i = 0; i < cards.Length; i++)
         {
-            cards[i]/GetComponent<Card>().initialized = false;
+            cards[i].GetComponent<Card>().initialized = false;
         }
         for(int id = 0; id < 2; id++)
         {
