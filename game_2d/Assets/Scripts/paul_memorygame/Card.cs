@@ -28,14 +28,14 @@ public class Card : MonoBehaviour
 
     public void setupGraphics()
     {
-        _cardBack = _manager.GetComponent<GameManager>().getCardBack();
-        _cardBack = _manager.GetComponent<GameManager>().getCardFace(_cardValue);
+        _cardBack = _manager.GetComponent<game_manager>().getCardBack();
+        _cardBack = _manager.GetComponent<game_manager>().getCardFace(_cardValue);
 
         flipCard();
 
     }
 
-    void flipCard()
+    public void flipCard()
     {
         if(_state == 0 && !DO_NOT)
         {

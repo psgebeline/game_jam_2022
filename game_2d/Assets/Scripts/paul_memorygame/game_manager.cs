@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class game_manager : MonoBehaviour
 {
     public Sprite[] cardFace;
     public Sprite cardBack;
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
         {
             x = 2;
             _matches--;
-            matchText = "Number of Matches: " + _matches;
+            matchText.text = "Number of Matches: " + _matches;
             if(_matches ==0)
             {
                 //end game
