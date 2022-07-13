@@ -34,6 +34,12 @@ public class game_manager : MonoBehaviour
 
     void initializeCards() //nested for loop, first for matches, second for all card types
     {
+        
+        for(int i = 0; i < cards.Length; i++)
+        {
+            cards[i].GetComponent<Card>().initialized = false;
+        }
+        
         for(int id = 0; id < 2; id++)
         {
             for(int i = 1; i < 7; i++)
