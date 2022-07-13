@@ -4,45 +4,33 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController controller;
+    public CharacterController controller; //creates a controller instance
 
-    public float runSpeed = 40f;
+    public float runSpeed = 40f; //default runSpeed
 
-    public float horizontalMove = 0f;
+    public float horizontalMove = 0f; //for calc of movespeed
 
-    bool jump = false;
-    
-    bool crouch = false;
+    bool jump = false; //status of jump
 
     void Update()
     {
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; //calcs movespeed
 
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump")) //sets jump to true if spacebar or w is pressed
         {
             jump = true;
         }
-
-        if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        } else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
-
     }
 
     void FixedUpdate()
     {
-        //moves character
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        //moves character and adjusts it to realtime resets jump
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
 
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) //if characer collidies with the coin object it destroys it
     {
         if(other.gameObject.CompareTag("Coin"))
         {

@@ -7,21 +7,21 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
 
-    public static ScoreManager instance;
+    public static ScoreManager instance; 
     public TextMeshProUGUI text;
-    int score;
+    int score; //variables / calls
 
-
-    // Start is called before the first frame update
     void Start()
     {
         if(instance == null)
         {
             instance = this;
         }
+
+        //resets
     }
 
-    public void ChangeScore(int coinValue)
+    public void ChangeScore(int coinValue) //+1 to score when ChangeScore is called in "Coin" and ToString
     {
         score += coinValue;
         text.text = "" + score.ToString();
@@ -29,7 +29,7 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        if(score == 5)
+        if(score == 5) //sets win condition, ends scene and transitions to new one
         {
             SceneManager.LoadScene("Win Screen");
         }

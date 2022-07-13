@@ -6,25 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public float currentTime = 0;
-    float startingTime = 10f;
+    public static float currentTime = 0;
+    float startingTime = 6f;
 
+    //allows for a text to be set with the script
     [SerializeField] public TextMeshProUGUI countdownText;
 
     void Start()
     {
+        //sets currentTime to startingTime
         currentTime = startingTime;
     }
 
-    void Update()
+    void Update() 
     {
+        //substracts time from current time to countdown
         currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("00");
+        //translates float to text using ToString
+        countdownText.text = currentTime.ToString("0.0");
 
-        if(currentTime <= 0)
+        if(currentTime <= 0) //if the timer hits 0, the screen loads to the Lose Screen scene and resets the time.
         {
             currentTime = 0;
-            SceneManager.LoadScene("RobbieMinigame");
+            SceneManager.LoadScene("Lose Screen");
         } 
     }
 }
