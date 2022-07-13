@@ -9,10 +9,10 @@ public class game_manager : MonoBehaviour
     public Sprite[] cardFace;
     public Sprite cardBack;
     public GameObject[] cards;
-    public Text matchText;
+    public Text matchText; //storing variables
 
-    private bool _init = false;
-    private int _matches = 13;
+    private bool _init = false; 
+    private int _matches = 6;
 
     
     
@@ -22,11 +22,11 @@ public class game_manager : MonoBehaviour
     
     void Update()
     {
-        if(!_init)
+        if(!_init) //if the card is not initialized, initialize it.
         {
             initializeCards();
         }
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0)) //if a card is clicked, check what card it is
         {
             checkCards();
         }
@@ -34,24 +34,21 @@ public class game_manager : MonoBehaviour
 
     void initializeCards() //nested for loop, first for matches, second for all card types
     {
-         
-        for(int i = 0; i < cards.Length; i++)
-        {
-            cards[i].GetComponent<Card>().initialized = false;
-        }
         for(int id = 0; id < 2; id++)
         {
-            for(int i = 1; i < 14; i++)
+            for(int i = 1; i < 7; i++)
             {
                 bool test = false;
                 int choice = 0;
                 while(!test)
                 {
                     choice = Random.Range(0, cards.Length);
-                    test = !(cards[choice].GetComponent<Card>().initialized);
+                    test = !(cards[choice].GetComponent<Card>().initialized); //set test to the 
+                    //opposite of if the card is initialized -- if it is initialized, make test
+                    //false, and vice versa
                 }
                 cards[choice].GetComponent<Card>().cardValue = i;
-                cards[choice].GetComponent<Card>().initialized = true;
+                cards[choice].GetComponent<Card>().initialized = true; 
 
             }
 
