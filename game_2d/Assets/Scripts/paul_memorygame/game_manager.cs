@@ -14,6 +14,12 @@ public class game_manager : MonoBehaviour
     private bool _init = false;
     private int _matches = 13;
 
+    
+    
+    
+    
+    
+    
     void Update()
     {
         if(!_init)
@@ -28,6 +34,11 @@ public class game_manager : MonoBehaviour
 
     void initializeCards() //nested for loop, first for matches, second for all card types
     {
+         for(int i = 0; i <cards.Length; i++) //resets cards, had to be added due to issue with infinite looping While
+        {
+            cards[i].GetComponent<Card>().initialized = false;
+        }
+
         for(int id = 0; id < 2; id++)
         {
             for(int i = 1; i < 14; i++)
