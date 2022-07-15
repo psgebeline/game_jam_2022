@@ -9,6 +9,8 @@ namespace DialogueSystem
     {
         private Text textHolder;
         [SerializeField] private string input; //storing variables from 1st script
+        private Color textColor;
+        private Font textFont;
 
         private void Awake()
         {
