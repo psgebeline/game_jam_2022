@@ -29,7 +29,7 @@ public class Card : MonoBehaviour
     public void setupGraphics()
     {
         _cardBack = _manager.GetComponent<game_manager>().getCardBack();
-        _cardBack = _manager.GetComponent<game_manager>().getCardFace(_cardValue);
+        _cardFace = _manager.GetComponent<game_manager>().getCardFace(_cardValue);
 
         flipCard();
 
