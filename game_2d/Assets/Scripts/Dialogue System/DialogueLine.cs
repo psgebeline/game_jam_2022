@@ -8,9 +8,11 @@ namespace DialogueSystem
     public class DialogueLine : DialogueBaseClass //inherit functions from the other script
     {
         private Text textHolder;
+        
+        [Header ("Text Options")]
         [SerializeField] private string input; //storing variables from 1st script
-        private Color textColor;
-        private Font textFont;
+        [SerializeField] private Color textColor;
+        [SerializeField] private Font textFont;
 
         private void Awake()
         {
