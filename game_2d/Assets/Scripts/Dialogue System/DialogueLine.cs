@@ -14,11 +14,14 @@ namespace DialogueSystem
         [SerializeField] private Color textColor;
         [SerializeField] private Font textFont;
 
+        [Header("Time Parameters")]
+        [SerializeField] private float delay;
+
         private void Awake()
         {
             textHolder = GetComponent<Text>();
 
-            StartCoroutine(WriteText(input, textHolder, textColor, textFont));
+            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay));
 
         }
 

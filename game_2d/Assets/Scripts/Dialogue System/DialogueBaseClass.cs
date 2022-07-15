@@ -12,14 +12,15 @@ namespace DialogueSystem
         //0.1 seconds before displaying the next letter. "protected" lets it be called in 
         //the child class (dialogue line script)
         
-        protected IEnumerator WriteText(string input, Text textHolder, Color textColor, Font textFont) 
+        protected IEnumerator WriteText(string input, Text textHolder, Color textColor, Font textFont, float delay, AudioClip sound) 
         {
             textHolder.color = textColor;
             textHolder.font = textFont;
             for(int i = 0; i < input.Length; i++)
             {
                 textHolder.text += input[i];
-                yield return new WaitForSeconds(0.1f);
+                //play letter sound (waiting to make sound manager script)
+                yield return new WaitForSeconds(delay);
             }
 
         }
