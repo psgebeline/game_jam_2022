@@ -9,9 +9,10 @@ namespace DialogueSystem
     {
         //this coroutine is responsible for showing letters one by one. essentially
         //it loops over every letter, putting the letter into the textholder and waiting
-        //0.1 seconds before displaying the next letter.
+        //0.1 seconds before displaying the next letter. "protected" lets it be called in 
+        //the child class (dialogue line script)
         
-        private IEnumerator WriteText(string input, Text textHolder)
+        protected IEnumerator WriteText(string input, Text textHolder) 
         {
             for(int i = 0; i < input.Length; i++)
             {
