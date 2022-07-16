@@ -12,12 +12,15 @@ public class LevelLoader : MonoBehaviour
     void Update()
     {
 
-        if()
+        if(Input.GetMouseButtonDown(0))
         {
             LoadNextScene(); 
         }
 
-        public void LoadNextScene()
+        
+    }
+    
+    public void LoadNextScene()
         {
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
 
@@ -33,9 +36,11 @@ public class LevelLoader : MonoBehaviour
             yield return new WaitForSeconds(transitionTime);
 
             //load scene
-            SceneManager.LoadScene(levelIndex)
-
+            SceneManager.LoadScene(levelIndex);
         }
-        
-    }
 }
+
+
+        
+
+
