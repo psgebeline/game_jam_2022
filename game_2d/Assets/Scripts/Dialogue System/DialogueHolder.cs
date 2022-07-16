@@ -20,8 +20,8 @@ namespace DialogueSystem
                 Deactivate(); //call the below function before activating new dialogue, to deactivate the other lines
                 transform.GetChild(i).gameObject.SetActive(true);
                 yield return new WaitUntil(() => transform.GetChild(i).GetComponent<DialogueLine>().finished); //tells script when the previous dialogue is done and it can present the next one
-
             }
+            gameObject.SetActive(false); //stop dialogue when the loop is done
 
         }
 
