@@ -25,7 +25,8 @@ namespace DialogueSystem
                 yield return new WaitForSeconds(delay);
             }
 
-            yield return new WaitForSeconds(delayBetweenLines);
+            //yield return new WaitForSeconds(delayBetweenLines); uncomment for a flat delay between lines
+            yield return new WaitUntil(() => Input.GetMouseButton(0));
             
             finished = true;
 
