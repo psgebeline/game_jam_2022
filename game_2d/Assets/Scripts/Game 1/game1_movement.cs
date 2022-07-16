@@ -16,6 +16,7 @@ public class game1_movement : MonoBehaviour
     [Header("Sound")]
     [SerializeField] private AudioClip jumpsound;
     [SerializeField] private AudioClip music;
+    public Animator animator;
 
 
     // Start is called before the first frame update

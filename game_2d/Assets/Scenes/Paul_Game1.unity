@@ -3322,6 +3322,7 @@ GameObject:
   - component: {fileID: 1430261124}
   - component: {fileID: 1430261125}
   - component: {fileID: 1430261126}
+  - component: {fileID: 1430261127}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3436,6 +3437,7 @@ MonoBehaviour:
   airborne: 0
   jumpsound: {fileID: 8300000, guid: 5ab3248f7661ff04c9596bad5cf7adc3, type: 3}
   music: {fileID: 8300000, guid: 15401d70ad5b07b41a0c45280c0ed733, type: 3}
+  animator: {fileID: 1430261127}
 --- !u!70 &1430261125
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3470,6 +3472,26 @@ MonoBehaviour:
   - {fileID: 1086216575}
   - {fileID: 1761534530}
   - {fileID: 622226506}
+--- !u!95 &1430261127
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430261119}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e6c61f9dd59cca84aa3654d245166bce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1434157041
 PrefabInstance:
   m_ObjectHideFlags: 0
