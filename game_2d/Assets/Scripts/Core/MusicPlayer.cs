@@ -14,7 +14,7 @@ public class MusicPlayer : MonoBehaviour
     {
         if (instance != null && instance != this)
         {
-            Destroy(this.gameObject);\
+            Destroy(this.gameObject);
             return;
         }
         else
