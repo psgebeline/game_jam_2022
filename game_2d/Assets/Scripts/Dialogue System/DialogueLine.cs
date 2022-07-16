@@ -29,10 +29,14 @@ namespace DialogueSystem
             textHolder = GetComponent<Text>();
             textHolder.text = "";
 
-            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound));
             imageHolder.sprite = characterSprite;
             imageHolder.preserveAspect = true;
 
+        }
+
+        private void Start()
+        {
+            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound));
         }
 
         

@@ -12,6 +12,8 @@ namespace DialogueSystem
         //0.1 seconds before displaying the next letter. "protected" lets it be called in 
         //the child class (dialogue line script)
         
+        public bool finished { get; private set; }
+        
         protected IEnumerator WriteText(string input, Text textHolder, Color textColor, Font textFont, float delay, AudioClip sound) 
         {
             textHolder.color = textColor;
@@ -22,6 +24,8 @@ namespace DialogueSystem
                 SoundManager.instance.PlaySound(sound);
                 yield return new WaitForSeconds(delay);
             }
+
+            finished = true;
 
         }
     }
