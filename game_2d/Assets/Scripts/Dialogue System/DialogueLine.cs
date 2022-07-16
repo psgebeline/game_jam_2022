@@ -27,9 +27,11 @@ namespace DialogueSystem
         private void Awake()
         {
             textHolder = GetComponent<Text>();
+            textHolder.text = "";
 
             StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound));
             imageHolder.sprite = characterSprite;
+            imageHolder.preserveAspect = true;
 
         }
 
