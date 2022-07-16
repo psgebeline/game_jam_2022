@@ -13,11 +13,16 @@ public class game1_movement : MonoBehaviour
     
     public bool airborne; //used to prevent jumping while in midair
 
+    [Header("Sound")]
+    [SerializeField] private AudioClip jumpsound;
+    [SerializeField] private AudioClip music;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); //self-explanatory, game needs to know what "rb" is as soon as the game starts
+        SoundManager.instance.PlaySound(music);
     }
 
     // Update is called once per frame
@@ -34,6 +39,7 @@ public class game1_movement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && airborne == false) //this statement will not execute when the player is in the air
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump)); //makes the player jump when spacebar is pressed by adding a vertical force to it which depends on jump speed
+            SoundManager.instance.PlaySound(jumpsound); //plays jump sound
         }
     }
 
