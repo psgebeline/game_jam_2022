@@ -4,15 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Background
   - 
   - 
   - 
@@ -39,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 838469049
+    locked: 0
+  - name: Middleground
+    uniqueID: 2738934125
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
