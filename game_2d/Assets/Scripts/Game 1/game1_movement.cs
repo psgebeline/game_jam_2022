@@ -23,11 +23,11 @@ public class game1_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( acceleration < maxSpeed);
+        if(acceleration < maxSpeed);
         {
 
             acceleration += 1;
-            rb.velocity = new Vector2(speed + acceleration*Time.deltaTime, rb.velocity.y); //makes the player move at speed plus acceleration which incrementally increases, y velocity remains unchanged bc horizontal input has no affect on vertical speed.
+            rb.velocity = new Vector2(speed + 0.75f*acceleration*Time.deltaTime, rb.velocity.y); //makes the player move at speed plus acceleration which incrementally increases, y velocity remains unchanged bc horizontal input has no affect on vertical speed.
         }
 
 
