@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
+    [SerializeField] private AudioClip starting_music;
+    [SerializeField] private AudioClip game_music;
+    
     private static MusicPlayer instance = null;
     public static MusicPlayer Instance
     {
@@ -23,5 +26,11 @@ public class MusicPlayer : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    void Start()
+    {
+        SoundManager.instance.PlaySound(starting_music);
+
     }
 }
