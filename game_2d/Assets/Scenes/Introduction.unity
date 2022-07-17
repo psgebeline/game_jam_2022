@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 577114622}
   - component: {fileID: 577114621}
   - component: {fileID: 577114620}
+  - component: {fileID: 577114623}
   m_Layer: 5
   m_Name: Dialogue_paul1
   m_TagString: Untagged
@@ -250,9 +251,9 @@ MonoBehaviour:
     never could say no to a patient in need...
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.05
+  delay: 0.00001
   delayBetweenLines: 0
-  sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
+  sound: {fileID: 8300000, guid: ee75b8b9cedd244489a6c57b7bed804f, type: 3}
   characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
   imageHolder: {fileID: 1750433850}
 --- !u!114 &577114621
@@ -297,6 +298,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577114618}
   m_CullTransparentMesh: 1
+--- !u!114 &577114623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577114618}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efb8c55a6f8775458c6dfd65a7d155d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 'but they''re hardy, strong people, and given the chance, they become even
+    stronger friends. By complete happenstance, your carriage has broken down and
+    you''ve found yourself in this village, and it will be several weeks before a
+    carpenter can make their way out to fix it. In the meantime, the local farmer
+    is sick and needs your help. He doesn''t have much in the way of money, but you
+    never could say no to a patient in need... '
+  textColor: {r: 1, g: 1, b: 1, a: 0}
+  textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
+  delay: 0.05
+  delayBetweenLines: 0
+  sound: {fileID: 8300000, guid: ee75b8b9cedd244489a6c57b7bed804f, type: 3}
+  characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
+  imageHolder: {fileID: 1750433850}
 --- !u!1 &615181357
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,8 +485,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1010791107}
   - component: {fileID: 1010791106}
-  - component: {fileID: 1010791105}
   - component: {fileID: 1010791104}
+  - component: {fileID: 1010791108}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -482,7 +508,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starting_music: {fileID: 8300000, guid: d320e3d95458da740b62f5d0414260a1, type: 3}
   game_music: {fileID: 8300000, guid: 15401d70ad5b07b41a0c45280c0ed733, type: 3}
---- !u!82 &1010791105
+--- !u!114 &1010791106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010791103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573d7f81b579f8e4aa076a04d72d3905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1010791107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010791103}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 539.7546, y: 26.281986, z: 0.61621195}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1010791108
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -494,7 +547,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.279
+  m_Volume: 0.201
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -578,33 +631,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1010791106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010791103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 573d7f81b579f8e4aa076a04d72d3905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1010791107
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010791103}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 539.7546, y: 26.281986, z: 0.61621195}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116060402
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,6 +829,7 @@ GameObject:
   - component: {fileID: 1420529999}
   - component: {fileID: 1420529998}
   - component: {fileID: 1420529997}
+  - component: {fileID: 1420530000}
   m_Layer: 5
   m_Name: Dialogue_paul1
   m_TagString: Untagged
@@ -849,9 +876,9 @@ MonoBehaviour:
     contact with the outside world, the people are wary of strangers...
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.05
+  delay: 0.00001
   delayBetweenLines: 0
-  sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
+  sound: {fileID: 8300000, guid: ee75b8b9cedd244489a6c57b7bed804f, type: 3}
   characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
   imageHolder: {fileID: 895120187}
 --- !u!114 &1420529998
@@ -896,6 +923,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420529995}
   m_CullTransparentMesh: 1
+--- !u!114 &1420530000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420529995}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efb8c55a6f8775458c6dfd65a7d155d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: Two miles south of the White Mountains, far beyond civilization, there rests
+    an old agricultural village called Mazria. Cradled between two peaks in a deep
+    valley, few human feet have tread there and even fewer doctors. Having little
+    contact with the outside world, the people are wary of strangers...
+  textColor: {r: 1, g: 1, b: 1, a: 0}
+  textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
+  delay: 0.05
+  delayBetweenLines: 0
+  sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
+  characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
+  imageHolder: {fileID: 895120187}
 --- !u!1 &1695233411
 GameObject:
   m_ObjectHideFlags: 0
