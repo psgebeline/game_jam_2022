@@ -21,9 +21,18 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump")) //sets jump to true if spacebar or w is pressed
         {
             jump = true;
+            animator.SetBool("isJumping", true);
         }
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove)); //sets the float variable speed in the animator to horizontal move w/ absolute value
+<<<<<<< Updated upstream
+=======
+
+        if (currentHealth  <= 0)
+        {
+            Die();
+        }
+>>>>>>> Stashed changes
     }
 
     void FixedUpdate()
@@ -31,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         //moves character and adjusts it to realtime resets jump
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
+        animator.SetBool("isJumping", false);
 
     }
 

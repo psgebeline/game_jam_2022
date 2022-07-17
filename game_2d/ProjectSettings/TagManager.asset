@@ -4,6 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
+=======
+  - Obstacle
+  - Coin
+  - Bullet
+  - Manager
+  - Ground
+  - Enemy
+  - Wall
+  - Floor
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

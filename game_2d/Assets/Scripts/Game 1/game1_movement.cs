@@ -34,7 +34,15 @@ public class game1_movement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && airborne == false) //this statement will not execute when the player is in the air
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump)); //makes the player jump when spacebar is pressed by adding a vertical force to it which depends on jump speed
+<<<<<<< Updated upstream
+=======
+            SoundManager.instance.PlaySound(jumpsound); //plays jump sound
+            animator.SetBool("isJumping", true);
+>>>>>>> Stashed changes
         }
+
+        animator.SetFloat("Speed", 1); //sets the float variable speed in the animator to horizontal move w/ absolute value
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -42,6 +50,15 @@ public class game1_movement : MonoBehaviour
         if(other.gameObject.CompareTag("Ground")) //the ground has tag "Ground", so when our player's collider hits the ground's collider, this if statement will execute
         {
             airborne = false; //AKA if the player is on the ground then they are not airborne. revolutionary, i know.
+<<<<<<< Updated upstream
+=======
+            animator.SetBool("isJumping", false);
+            animator.SetFloat("Speed", 0);
+        }
+        if(other.gameObject.CompareTag("Finish"))
+        {
+            sceneChange.LoadScene();
+>>>>>>> Stashed changes
         }
     }
 

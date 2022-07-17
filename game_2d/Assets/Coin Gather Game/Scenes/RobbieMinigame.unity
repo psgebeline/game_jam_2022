@@ -747,6 +747,9 @@ MonoBehaviour:
   runSpeed: 80
   horizontalMove: 0
   animator: {fileID: 396976054}
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
 --- !u!58 &396976047
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7586,7 +7589,7 @@ GameObject:
   - component: {fileID: 1292567644}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
