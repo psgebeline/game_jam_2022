@@ -15,15 +15,16 @@ public class game1_movement : MonoBehaviour
 
     [Header("Sound")]
     [SerializeField] private AudioClip jumpsound;
-    [SerializeField] private AudioClip music;
+//[SerializeField] private AudioClip music;
     public Animator animator;
+    public SceneChange sceneChange;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); //self-explanatory, game needs to know what "rb" is as soon as the game starts
-        SoundManager.instance.PlaySound(music);
+        //SoundManager.instance.PlaySound(music);
     }
 
     // Update is called once per frame
@@ -51,6 +52,10 @@ public class game1_movement : MonoBehaviour
         {
             airborne = false; //AKA if the player is on the ground then they are not airborne. revolutionary, i know.
             animator.SetBool("isJumping", false);
+        }
+        if(other.gameObject.CompareTag("Finish"))
+        {
+            sceneChange.LoadScene();
         }
     }
 
