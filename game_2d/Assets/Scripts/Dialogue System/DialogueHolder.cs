@@ -8,12 +8,16 @@ namespace DialogueSystem
     
     public class DialogueHolder : MonoBehaviour
     {
-        public bool finished = false;
-
+        public SceneChange sceneChange;
+        
+        
         private void Awake()
         {
             StartCoroutine(dialogueSequence()); //initializes dialogue sequence
         }
+
+
+
         
         
         private IEnumerator dialogueSequence()
@@ -25,7 +29,7 @@ namespace DialogueSystem
                 yield return new WaitUntil(() => transform.GetChild(i).GetComponent<DialogueLine>().finished); //tells script when the previous dialogue is done and it can present the next one
             }
             gameObject.SetActive(false); //stop dialogue when the loop is done
-            finished = true; 
+            sceneChange.LoadScene();
 
         }
 
