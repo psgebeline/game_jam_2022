@@ -42,8 +42,10 @@ public class game1_movement : MonoBehaviour
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump)); //makes the player jump when spacebar is pressed by adding a vertical force to it which depends on jump speed
             SoundManager.instance.PlaySound(jumpsound); //plays jump sound
-            //animator.SetBool("isJumping", true);
+            animator.SetBool("isJumping", true);
         }
+
+        animator.SetFloat("Speed", 1);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
