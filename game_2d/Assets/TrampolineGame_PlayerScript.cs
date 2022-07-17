@@ -53,7 +53,7 @@ public class TrampolineGame_PlayerScript : MonoBehaviour
                 jumpHigh = false;
             }
 
-            SoundManager.instance.PlaySound(jumpsound); //plays jump sound
+            SoundManager2.instance.PlaySound(jumpsound); //plays jump sound
         }
 
         //moves the player in a sine wave, to simulate a jump. moves higher if high jump is enabled

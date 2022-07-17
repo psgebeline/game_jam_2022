@@ -130,7 +130,7 @@ public class CharacterController : MonoBehaviour
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-			SoundManager.instance.PlaySound(jumpsound); //play jump sound
+			SoundManager2.instance.PlaySound(jumpsound); //play jump sound
 		}
 	}
 

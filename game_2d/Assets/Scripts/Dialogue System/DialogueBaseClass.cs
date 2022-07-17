@@ -21,7 +21,7 @@ namespace DialogueSystem
             for(int i = 0; i < input.Length; i++)
             {
                 textHolder.text += input[i];
-                SoundManager.instance.PlaySound(sound);
+                SoundManager2.instance.PlaySound(sound);
                 yield return new WaitForSeconds(delay);
             }
 

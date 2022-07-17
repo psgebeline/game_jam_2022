@@ -75,7 +75,7 @@ public class FlyingOnionScript : MonoBehaviour
                 bullet.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.up * 25, ForceMode2D.Impulse);
                 timer = shootFrequency;
-                SoundManager.instance.PlaySound(jumpsound); //plays jump sound
+                SoundManager2.instance.PlaySound(jumpsound); //plays jump sound
             }
         }
     }

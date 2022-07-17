@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class TimerEnemies : MonoBehaviour
 {
     public static float currentTime = 0;
-    float startingTime = 10f;
+    float startingTime = 8f;
 
     //allows for a text to be set with the script
     [SerializeField] public TextMeshProUGUI enemiestimerText;

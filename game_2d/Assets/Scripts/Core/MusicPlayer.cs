@@ -30,7 +30,7 @@ public class MusicPlayer : MonoBehaviour
 
     void Start()
     {
-        SoundManager.instance.PlaySound(starting_music);
+        SoundManager2.instance.PlaySound(starting_music);
 
     }
 }
