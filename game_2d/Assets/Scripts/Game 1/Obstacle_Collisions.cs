@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Obstacle_Collisions : MonoBehaviour
 {
@@ -40,9 +41,9 @@ public class Obstacle_Collisions : MonoBehaviour
                 movement_script.acceleration = 0;
             }
 
-            if(i > 2)
+            if(i > 2) //if the player loses all of their lives
             {
-                sceneChange.LoadScene();
+                SceneManager.LoadScene("paul_losescrn");
             }
            
         }

@@ -251,7 +251,7 @@ MonoBehaviour:
     never could say no to a patient in need...
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.00001
+  delay: 0.01
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: ee75b8b9cedd244489a6c57b7bed804f, type: 3}
   characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
@@ -876,7 +876,7 @@ MonoBehaviour:
     contact with the outside world, the people are wary of strangers...
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.00001
+  delay: 0.01
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: ee75b8b9cedd244489a6c57b7bed804f, type: 3}
   characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
