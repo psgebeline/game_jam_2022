@@ -8,7 +8,7 @@ namespace DialogueSystem
     
     public class DialogueHolder : MonoBehaviour
     {
-        private bool finished;
+        public bool finished = false;
 
         private void Awake()
         {
