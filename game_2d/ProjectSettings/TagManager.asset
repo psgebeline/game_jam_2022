@@ -4,6 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Obstacle
+  - Coin
+  - Bullet
+  - Manager
+  - Ground
+  - Enemy
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -12,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Background
-  - 
+  - Obst
   - 
   - 
   - 

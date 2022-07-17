@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,18 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator; //access the animator
 
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; //calcs movespeed
@@ -24,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove)); //sets the float variable speed in the animator to horizontal move w/ absolute value
+
+        if(currentHealth  <= 0)
+        {
+            Die();
+        }
     }
 
     void FixedUpdate()
@@ -34,11 +52,32 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D other) //if characer collidies with the coin object it destroys it
+    void OnTriggerEnter2D(Collider2D other) //if characer collidies with the coin or enemy object it destroys it or takes damage
     {
         if(other.gameObject.CompareTag("Coin"))
         {
             Destroy(other.gameObject);
         }
+
+        EnemySc e1 = other.gameObject.GetComponent<EnemySc>();
+
+        if(e1)
+        {
+            Destroy(other.gameObject);
+            TakeDamage(25);
+        }
     }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
+    }
+
+    void Die()
+    {
+        SceneManager.LoadScene("Lose Scene");
+    }   
+
 }
