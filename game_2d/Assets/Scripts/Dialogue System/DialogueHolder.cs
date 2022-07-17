@@ -4,8 +4,11 @@ using UnityEngine;
 
 namespace DialogueSystem
 {
+    
+    
     public class DialogueHolder : MonoBehaviour
     {
+        private bool finished;
 
         private void Awake()
         {
@@ -22,6 +25,7 @@ namespace DialogueSystem
                 yield return new WaitUntil(() => transform.GetChild(i).GetComponent<DialogueLine>().finished); //tells script when the previous dialogue is done and it can present the next one
             }
             gameObject.SetActive(false); //stop dialogue when the loop is done
+            finished = true; 
 
         }
 
