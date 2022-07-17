@@ -32970,6 +32970,7 @@ MonoBehaviour:
   - {fileID: 1086216575}
   - {fileID: 1761534530}
   - {fileID: 622226506}
+  sceneChange: {fileID: 1812653652}
 --- !u!95 &1430261127
 Animator:
   serializedVersion: 4

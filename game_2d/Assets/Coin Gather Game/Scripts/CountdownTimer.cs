@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class CountdownTimer : MonoBehaviour
 {
     public static float currentTime = 0;
-    float startingTime = 7f;
+    float startingTime = 6f;
 
     //allows for a text to be set with the script
     [SerializeField] public TextMeshProUGUI countdownText;
