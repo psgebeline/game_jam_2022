@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2424507413317925478
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2834011247447176613, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834011247447176614, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1143494
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834011247447176614, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.473319
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834011247447176614, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.6992247
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321930, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321930, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321930, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321930, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321930, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.71203536
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321930, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.026757708
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321930, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.026348213
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321930, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7011387
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321930, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.066
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321930, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 4.304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321930, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -89.119
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321934, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: m_Name
+      value: spike
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321935, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321935, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: startPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321935, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: life.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321935, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: life.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645357119566321935, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}
+      propertyPath: life.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 99bcfaedfc1d1f745a056f29a9821cf6, type: 3}

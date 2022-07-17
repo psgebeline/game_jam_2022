@@ -24,6 +24,9 @@ public class TrampolineGame_PlayerScript : MonoBehaviour
     //true if the trampoline should be moving right
     bool hitEdge = false;
 
+    //sfx
+    [SerializeField] private AudioClip jumpsound;
+
     void Update()
     {
         float move = 0;
@@ -49,16 +52,20 @@ public class TrampolineGame_PlayerScript : MonoBehaviour
             {
                 jumpHigh = false;
             }
+
+            SoundManager.instance.PlaySound(jumpsound); //plays jump sound
         }
 
         //moves the player in a sine wave, to simulate a jump. moves higher if high jump is enabled
         if (!jumpHigh)
         {
             transform.position = new Vector3(transform.position.x + move * Time.deltaTime * playerMoveSpeed, Mathf.Sin(jumpTime * jumpSpeed) * 4 + 1.5f, transform.position.z);
+            
         }
         else
         {
             transform.position = new Vector3(transform.position.x + move * Time.deltaTime * playerMoveSpeed, Mathf.Sin(jumpTime * jumpSpeed) * 6 + 1.5f, transform.position.z);
+            
         }
         
 

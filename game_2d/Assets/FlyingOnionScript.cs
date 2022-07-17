@@ -8,6 +8,7 @@ public class FlyingOnionScript : MonoBehaviour
     [SerializeField] GameObject bullet;
     float shootFrequency = 2;
     float timer = 2;
+    [SerializeField] private AudioClip jumpsound;
 
     void Update()
     {
@@ -74,6 +75,7 @@ public class FlyingOnionScript : MonoBehaviour
                 bullet.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.up * 25, ForceMode2D.Impulse);
                 timer = shootFrequency;
+                SoundManager.instance.PlaySound(jumpsound); //plays jump sound
             }
         }
     }

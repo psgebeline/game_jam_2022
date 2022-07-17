@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: d5f4f03f80a9ae045929e52256839f56
+    path: Assets/Scenes/ala_title_menu.unity
+    guid: 8d7b97e7bb7a424479f549d4d32b19d8
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Introduction.unity
+    guid: 420dc9c39e94f41479114c3dda2ae820
+  - enabled: 1
+    path: Assets/Scenes/Dialogue.unity
+    guid: 08ec44eea16088e45b6eed5d2a67b31d
   - enabled: 1
     path: Assets/Coin Gather Game/Scenes/RobbieMinigame.unity
     guid: 90b5815486779954da437159af7e187a
@@ -20,5 +23,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Coin Gather Game/Scenes/Win Screen.unity
     guid: 010a26562c68e334985f46bfc9f422e9
+  - enabled: 1
+    path: Assets/Scenes/Paul_Game1.unity
+    guid: 5e3947d6f477377428c6112b4dff157c
+  - enabled: 1
+    path: Assets/Scenes/paul_losescrn.unity
+    guid: c3444b37d75dc0a4dbd707eb3d8b0e61
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: fe9b2191e78b14d4891c4a47bfc653db, type: 2}
