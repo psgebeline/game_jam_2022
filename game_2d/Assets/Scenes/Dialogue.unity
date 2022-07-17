@@ -178,10 +178,10 @@ MonoBehaviour:
   input: ... Coughin. He's been sick like this before but it's worse this time around.
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
-  characterSprite: {fileID: 21300000, guid: 48a13aad5ea256c4fa223a84d3db3c2e, type: 3}
+  characterSprite: {fileID: 21300000, guid: 98a2fa249db65e845b12bf5eb53bfebe, type: 3}
   imageHolder: {fileID: 1814989693}
 --- !u!114 &27564633
 MonoBehaviour:
@@ -356,10 +356,10 @@ MonoBehaviour:
   input: Was hopin' you could get rid of it for good.
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
-  characterSprite: {fileID: 21300000, guid: 48a13aad5ea256c4fa223a84d3db3c2e, type: 3}
+  characterSprite: {fileID: 21300000, guid: 98a2fa249db65e845b12bf5eb53bfebe, type: 3}
   imageHolder: {fileID: 1572553671}
 --- !u!114 &110086572
 MonoBehaviour:
@@ -730,7 +730,7 @@ MonoBehaviour:
   input: Zzzz....
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
   characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
@@ -832,10 +832,10 @@ MonoBehaviour:
   input: Well, Paul, we do now, and...
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
-  characterSprite: {fileID: 21300000, guid: 48a13aad5ea256c4fa223a84d3db3c2e, type: 3}
+  characterSprite: {fileID: 21300000, guid: 98a2fa249db65e845b12bf5eb53bfebe, type: 3}
   imageHolder: {fileID: 166743067}
 --- !u!114 &367262483
 MonoBehaviour:
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   input: We don't have no doctor in this town!
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
   characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
@@ -1255,8 +1255,8 @@ MonoBehaviour:
   input: I'll see what I can do.
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
-  delayBetweenLines: 2
+  delay: 0.05
+  delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
   characterSprite: {fileID: -2105188494, guid: 6b4ad9b94644ada47a61c95a34eb0666, type: 3}
   imageHolder: {fileID: 1229361597}
@@ -1301,6 +1301,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707596921}
+  m_CullTransparentMesh: 1
+--- !u!1 &747126897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 747126898}
+  - component: {fileID: 747126900}
+  - component: {fileID: 747126899}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &747126898
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747126897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1380958508}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 110.1, y: -19.2}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &747126899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747126897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d7001b365687c004c8b388e80d2d72e0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &747126900
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747126897}
   m_CullTransparentMesh: 1
 --- !u!1 &788282967
 GameObject:
@@ -1459,7 +1535,7 @@ MonoBehaviour:
   input: DOCTOR? *cough*
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
   characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
@@ -1561,7 +1637,7 @@ MonoBehaviour:
   input: Well I'm not talking to no *cough* stranger.
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
   characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
@@ -1739,10 +1815,10 @@ MonoBehaviour:
   input: ... he's come all this way to take a look at ye'.
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
-  characterSprite: {fileID: 21300000, guid: 48a13aad5ea256c4fa223a84d3db3c2e, type: 3}
+  characterSprite: {fileID: 21300000, guid: 98a2fa249db65e845b12bf5eb53bfebe, type: 3}
   imageHolder: {fileID: 2033563632}
 --- !u!114 &1128902243
 MonoBehaviour:
@@ -1841,10 +1917,10 @@ MonoBehaviour:
   input: Well, he's been weezin' and breathin' heavy and...
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
-  characterSprite: {fileID: 21300000, guid: 48a13aad5ea256c4fa223a84d3db3c2e, type: 3}
+  characterSprite: {fileID: 21300000, guid: 98a2fa249db65e845b12bf5eb53bfebe, type: 3}
   imageHolder: {fileID: 1724985037}
 --- !u!114 &1132625520
 MonoBehaviour:
@@ -2019,10 +2095,10 @@ MonoBehaviour:
   input: Paul don't make me grab the damn spoon.
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
-  characterSprite: {fileID: 21300000, guid: 48a13aad5ea256c4fa223a84d3db3c2e, type: 3}
+  characterSprite: {fileID: 21300000, guid: 98a2fa249db65e845b12bf5eb53bfebe, type: 3}
   imageHolder: {fileID: 1059075225}
 --- !u!114 &1318863720
 MonoBehaviour:
@@ -2095,7 +2171,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 747126898}
   m_Father: {fileID: 788282971}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2124,7 +2201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0155e6a293605d944bff13453c8aaab5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6abff7cb9b1935d4eaf733b579915c52, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2197,10 +2274,10 @@ MonoBehaviour:
   input: Paul I swear...! Oh, hey there doctor.
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
-  characterSprite: {fileID: 21300000, guid: 48a13aad5ea256c4fa223a84d3db3c2e, type: 3}
+  characterSprite: {fileID: 21300000, guid: 98a2fa249db65e845b12bf5eb53bfebe, type: 3}
   imageHolder: {fileID: 113607322}
 --- !u!114 &1457845566
 MonoBehaviour:
@@ -2535,10 +2612,10 @@ MonoBehaviour:
   input: 'It seem''s Paul''s, er, asleep now. Symptoms... '
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
-  characterSprite: {fileID: 21300000, guid: 48a13aad5ea256c4fa223a84d3db3c2e, type: 3}
+  characterSprite: {fileID: 21300000, guid: 98a2fa249db65e845b12bf5eb53bfebe, type: 3}
   imageHolder: {fileID: 1997988583}
 --- !u!114 &1770872343
 MonoBehaviour:
@@ -3061,7 +3138,7 @@ MonoBehaviour:
   input: '*cough*'
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.1
+  delay: 0.05
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: 3246d95a84f68e344b1e6942b47d29db, type: 3}
   characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
