@@ -28,7 +28,7 @@ public class TimerEnemies : MonoBehaviour
         if(currentTime <= 0) //if the timer hits 0, the screen loads to the Lose Screen scene and resets the time.
         {
             currentTime = 0;
-            SceneManager.LoadScene("Win Screen");
+            SceneManager.LoadScene("Win Screen 2");
         } 
     }
 }
