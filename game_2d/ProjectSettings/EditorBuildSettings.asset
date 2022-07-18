@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Dialogue.unity
     guid: 08ec44eea16088e45b6eed5d2a67b31d
   - enabled: 1
+    path: Assets/Scenes/games_intro.unity
+    guid: b967e22f9131b6e4d9f01fb594b1d27b
+  - enabled: 1
     path: Assets/Coin Gather Game/Scenes/RobbieMinigame.unity
     guid: 90b5815486779954da437159af7e187a
   - enabled: 1
