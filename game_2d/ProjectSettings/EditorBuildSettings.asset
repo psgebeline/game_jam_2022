@@ -44,5 +44,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending Dialogue.unity
     guid: 6e61a2699232f4741a9df19468463819
+  - enabled: 1
+    path: Assets/Scenes/title_menu_copy.unity
+    guid: ac210a77dba132e4b884938857bcbab9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: fe9b2191e78b14d4891c4a47bfc653db, type: 2}
