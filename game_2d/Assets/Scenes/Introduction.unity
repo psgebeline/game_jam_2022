@@ -251,7 +251,7 @@ MonoBehaviour:
     never could say no to a patient in need...
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.01
+  delay: 0.03
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: ee75b8b9cedd244489a6c57b7bed804f, type: 3}
   characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
@@ -485,7 +485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1010791107}
   - component: {fileID: 1010791106}
-  - component: {fileID: 1010791104}
+  - component: {fileID: 1010791109}
   - component: {fileID: 1010791108}
   m_Layer: 0
   m_Name: SoundManager
@@ -494,20 +494,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1010791104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010791103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 489a888855316e4449f5af474e3a0e26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  starting_music: {fileID: 8300000, guid: d320e3d95458da740b62f5d0414260a1, type: 3}
-  game_music: {fileID: 8300000, guid: 15401d70ad5b07b41a0c45280c0ed733, type: 3}
 --- !u!114 &1010791106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,9 +519,24 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1010791108
+--- !u!114 &1010791108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010791103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489a888855316e4449f5af474e3a0e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 1010791109}
+  starting_music: {fileID: 8300000, guid: d320e3d95458da740b62f5d0414260a1, type: 3}
+  game_music: {fileID: 8300000, guid: 15401d70ad5b07b41a0c45280c0ed733, type: 3}
+--- !u!82 &1010791109
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -545,9 +546,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.201
+  m_audioClip: {fileID: 8300000, guid: 15401d70ad5b07b41a0c45280c0ed733, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.112
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -876,7 +877,7 @@ MonoBehaviour:
     contact with the outside world, the people are wary of strangers...
   textColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   textFont: {fileID: 12800000, guid: 8f5a1aea099c7204ba8a947fc2e261ee, type: 3}
-  delay: 0.01
+  delay: 0.03
   delayBetweenLines: 0
   sound: {fileID: 8300000, guid: ee75b8b9cedd244489a6c57b7bed804f, type: 3}
   characterSprite: {fileID: 21300000, guid: fb4ca5568f6025a48ae17d16d457aee2, type: 3}
@@ -1172,5 +1173,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
