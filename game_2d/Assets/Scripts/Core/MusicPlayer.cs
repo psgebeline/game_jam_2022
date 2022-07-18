@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
+    public AudioSource musicSource;
     [SerializeField] private AudioClip starting_music;
     [SerializeField] private AudioClip game_music;
     
@@ -30,7 +31,8 @@ public class MusicPlayer : MonoBehaviour
 
     void Start()
     {
-        SoundManager2.instance.PlaySound(starting_music);
+        musicSource.PlayOneShot(starting_music);
+        musicSource.PlayScheduled(AudioSettings.dspTime + starting_music.length);
 
     }
 }
